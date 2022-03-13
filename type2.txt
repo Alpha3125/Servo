@@ -1,0 +1,13 @@
+void type2(int pos1=10,int pos2=80,int gap=2000,int interval=200)
+{
+  int ticks=gap/interval;
+  int initial=servo.read();
+  int turn=(pos1-initial)/ticks;
+  for(int i=1;i<=ticks;i++)
+  {
+    delay(interval);
+    servo.write(initial + i*turn);
+  }
+  delay(gap);
+  servo.write(pos2);
+}

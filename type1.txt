@@ -1,0 +1,6 @@
+void type1(int pos1=20,int pos2=80,int gap=1000)
+{
+ servo.write(pos1);
+ delay(gap);
+ servo.write(pos2);
+}
